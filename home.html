@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(166, 164, 164);
+            /* background-image: url(Netflix-Background.jpg) ; */
+            
+        
+        }
+        img{
+            max-width: 100%;
+        }
+        .container{
+            padding: 40px 0;
+        }
+        figure{
+            max-width: 800px;
+            margin: 0 auto 40px;
+            border: 2px solid #fff;
+        }
+        figure img{
+            max-width: 100%;
+            min-width: 100%;
+            display: block;
+            height: 500px;
+            width: 540px;
+            box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            text-align: center;
+        }
+        ul li {
+            margin:  0 5px;
+            display: inline-block;
+            width: 150px;
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+        ul li img{
+            display: block;
+            opacity: 0.4;
+            transition: 0.3s;
+            height: 100px;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.24);
+        }
+
+    </style>
+</head>
+<body>
+    <section class="first">
+    <div >
+        <img src="logo.webp" class="logo" height="50px" width="200px">
+        
+        <label class="lang"> SELECT YOUR LANGUAGE 
+            <select>
+              <option value="ENGLISH">ENGLISH </option>
+              <option  value="TELUGU">TELUGU</option>
+              <option value="TAMIL">TAMIL</option>
+              <option value="HINDI">HINDI</option>
+            </select>
+           <!-- &nbsp;&nbsp; &nbsp; &nbsp;   -->
+            
+        </label>
+        <a href="http://127.0.0.1:5500/sign%20in.html" id="signin"  class="aww">SIGN IN</a>
+    </div>
+    <div >
+        <p class="head"> Unlimited movies,Tv shows and more</p>
+         <p class="tail"> watch anywhere. cancel anytime .<br>ready to watch?  Enter your email to create or restart your membership.</p><br>
+         <label class="lab" >Email adress </label> <br><input type="email" class="email">
+    </div>
+    <br>
+   <a href="http://127.0.0.1:5500/sign%20in.html"><button class="but"> GET STARTED</button></a>
+</section><br>
+<section class="second">
+    <h1 style="color: white; margin-left: 520px;">
+        WATCH UNLIMITED MOVIES
+    </h1><br>
+    <h3 style="color: white; margin-left: 420px;">Action,Comedy,Horror,Drama,Romance,Thriller,Fantacy,Adventure</h3>
+    <div class="container" >
+         <figure >
+           <img src="./movies/movie 1.jpg" alt="MainImg" id="mainImg">
+         </figure>
+         <ul>
+            <li><img src="./movies/movie 1.jpg" alt="movie1"></li>
+            <li><img src="./movies/movie 2.jpg" alt="movie2"></li>
+            <li><img src="./movies/movie 3.jpg" alt="movie3"></li>
+            <li><img src="./movies/movie 4.jpg" alt="movie4"></li>
+            <li><img src="./movies/movie 5.jpg" alt="movie5"></li>
+            <li><img src="./movies/movie 6.jpg" alt="movie6"></li>
+            <li><img src="./movies/movie 7.jpg" alt="movie7"></li>
+            
+         </ul>
+    </div>
+</section><br>
+<section class="tv">
+    <img src="tv.jpg" class="red">
+    <div class="enjoy">
+        
+        Enjoy on your TV
+ <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, <br>Apple TV, Blu-ray players and more.</p>
+    </div> 
+</section>&nbsp
+<section class="tv">
+    
+    <div class="ten">
+        
+     Download your shows to watch offline<p>Save your favourites easily and always have something to watch</p>
+     
+    </div>
+    <img src="mobile-0819.jpg" class="green">
+</section> <br>
+<section class="tv">
+    <img src="Untitled-150-1134x840.jpg" class="red" >
+    <div class="enjoy">
+       Watch anywhere
+       <P>Stream unlimited movies and TV shows on your Phone,Tablet, Laptop and TV</P>
+    </div>
+</section>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+       $("ul img").on({
+          mouseover:function(){
+            $(this).css({'opacity':1,})
+          },
+          mouseout:function(){
+            $(this).css({'opacity':0.4,})
+          },
+          click:function(){
+             var imgUrl=$(this).attr('src');
+             $("#mainImg").fadeOut(500,function(){
+                $(this).attr('src',imgUrl);
+             }).fadeIn(500);
+          },
+       }) ; 
+    });
+
+</script>
+</html>
